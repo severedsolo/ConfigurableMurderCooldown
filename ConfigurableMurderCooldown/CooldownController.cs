@@ -9,7 +9,12 @@ public static class CooldownController
         int maxValue = GetMaxValue(newMurderer);
         int valueToSet = r.Next(minValue, maxValue+1);
         MurderController.Instance.pauseBetweenMurders = valueToSet;
-        if(MurderController.Instance.GetCurrentMurder() != null) MurderController.Instance.GetCurrentMurder().preset.minimumTimeBetweenMurders = valueToSet;
+        if (MurderController.Instance.GetCurrentMurder() != null)
+        {
+            MurderController.Instance.GetCurrentMurder().preset.minimumTimeBetweenMurders = valueToSet;
+            valueToSet = (int)MurderController.Instance.GetCurrentMurder().preset.minimumTimeBetweenMurders;
+        }
+        else valueToSet = (int)MurderController.Instance.pauseBetweenMurders;
         Plugin.ModLog("Set cooldown to "+valueToSet);
     }
 

@@ -1644,7 +1644,6 @@
       "path": "disarm/2022.1.0-master.34",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "disarm.2022.1.0-master.34.nupkg.sha512",
         "disarm.nuspec",
         "lib/net6.0/Disarm.dll",
@@ -4576,25 +4575,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\evilp\\.nuget\\packages\\": {}
+    "/home/martin/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\evilp\\OneDrive\\ConfigurableMurderCooldown\\ConfigurableMurderCooldown\\ConfigurableMurderCooldown.csproj",
+      "projectUniqueName": "/home/martin/OneDrive/ConfigurableMurderCooldown/ConfigurableMurderCooldown/ConfigurableMurderCooldown.csproj",
       "projectName": "ConfigurableMurderCooldown",
-      "projectPath": "C:\\Users\\evilp\\OneDrive\\ConfigurableMurderCooldown\\ConfigurableMurderCooldown\\ConfigurableMurderCooldown.csproj",
-      "packagesPath": "C:\\Users\\evilp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\evilp\\OneDrive\\ConfigurableMurderCooldown\\ConfigurableMurderCooldown\\obj\\",
+      "projectPath": "/home/martin/OneDrive/ConfigurableMurderCooldown/ConfigurableMurderCooldown/ConfigurableMurderCooldown.csproj",
+      "packagesPath": "/home/martin/.nuget/packages/",
+      "outputPath": "/home/martin/OneDrive/ConfigurableMurderCooldown/ConfigurableMurderCooldown/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\evilp\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/martin/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "/usr/lib64/dotnet/library-packs": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.bepinex.dev/v3/index.json;": {},
+        "https://nuget.samboy.dev/v3/index.json ": {}
       },
       "frameworks": {
         "net6.0": {
@@ -4611,7 +4613,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net6.0": {
@@ -4638,7 +4641,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.105/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -35,15 +35,20 @@ public class Plugin : PluginController<Plugin>
 
     private void OnDeleteGame(object? sender, SaveGameArgs e)
     {
-        File.Delete(GetSavePath(e.FilePath));
+        string path = GetSavePath(e.FilePath);
+        if (!File.Exists(path)) return;
+        File.Delete(path);
         ModLog("Save deleted");
     }
 
     private void OnSaveGame(object? sender, SaveGameArgs e)
     {
+        if (MurderController.Instance == null) return;
         StringBuilder saveData = new StringBuilder();
         saveData.AppendLine(MurderController.Instance.pauseBetweenMurders.ToString());
-        saveData.AppendLine(MurderController.Instance.GetCurrentMurder().preset.minimumTimeBetweenMurders.ToString());
+        Log.LogInfo("Saved line 1");
+        if(MurderController.Instance.GetCurrentMurder() != null) saveData.AppendLine(MurderController.Instance.GetCurrentMurder().preset.minimumTimeBetweenMurders.ToString());
+        Log.LogInfo("Saved line 2");
         using StreamWriter writer = new StreamWriter(GetSavePath(e.FilePath));
         writer.Write(saveData.ToString());
         ModLog("Data saved");
@@ -71,8 +76,8 @@ public class Plugin : PluginController<Plugin>
             if (saveData.Count == 0) return;
             float.TryParse(saveData[0], out float f);
             MurderController.Instance.pauseBetweenMurders = f;
-            float.TryParse(saveData[1], out f);
-            MurderController.Instance.GetCurrentMurder().preset.minimumTimeBetweenMurders = f;
+            if(saveData.Count >1) float.TryParse(saveData[1], out f);
+            if(MurderController.Instance.GetCurrentMurder()!= null) MurderController.Instance.GetCurrentMurder().preset.minimumTimeBetweenMurders = f;
             ModLog("Data Restored");
         }
     }

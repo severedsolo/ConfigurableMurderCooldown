@@ -11,8 +11,13 @@ public static class PatchPickNewMurderer
     [HarmonyPostfix]
     private static void Postfix(MurderController __instance)
     {
-        if (IsNewGame && !Settings.ApplyToNewGames.Value) return;
+        if (IsNewGame && !Settings.ApplyToNewGames.Value)
+        {
+            IsNewGame = false;
+            return;
+        }
         Plugin.ModLog("New Murderer. Resetting cooldown");
         CooldownController.SetCooldown(true);
+        IsNewGame = false;
     }
 }

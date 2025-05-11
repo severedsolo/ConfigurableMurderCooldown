@@ -11,5 +11,6 @@ public class PatchPickNewVictim
         CooldownController.SetCooldown(false);
         MurderController.Instance.pauseBetweenMurders = 0;
         Plugin.ModLog("New Victim. Resetting cooldown");
+            
     }
 }

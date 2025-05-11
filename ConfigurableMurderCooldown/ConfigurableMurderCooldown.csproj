@@ -12,22 +12,25 @@
 
     <ItemGroup>
       <Reference Include="Assembly-CSharp">
-        <HintPath>D:\Program Files (x86)\Steam\steamapps\common\Shadows of Doubt\BepInEx\interop\Assembly-CSharp.dll</HintPath>
+        <HintPath>..\..\..\Steam\steam\steamapps\common\Shadows of Doubt\BepInEx\interop\Assembly-CSharp.dll</HintPath>
       </Reference>
       <Reference Include="Assembly-CSharp-firstpass">
-        <HintPath>D:\Program Files (x86)\Steam\steamapps\common\Shadows of Doubt\BepInEx\interop\Assembly-CSharp-firstpass.dll</HintPath>
+        <HintPath>..\..\..\Steam\steam\steamapps\common\Shadows of Doubt\BepInEx\interop\Assembly-CSharp-firstpass.dll</HintPath>
       </Reference>
       <Reference Include="Il2Cppmscorlib">
-        <HintPath>D:\Program Files (x86)\Steam\steamapps\common\Shadows of Doubt\BepInEx\interop\Il2Cppmscorlib.dll</HintPath>
+        <HintPath>..\..\..\Steam\steam\steamapps\common\Shadows of Doubt\BepInEx\interop\Il2Cppmscorlib.dll</HintPath>
+      </Reference>
+      <Reference Include="Il2CppSystem">
+        <HintPath>..\..\..\Steam\steam\steamapps\common\Shadows of Doubt\BepInEx\interop\Il2CppSystem.dll</HintPath>
       </Reference>
       <Reference Include="Il2CppSystem.Core">
-        <HintPath>D:\Program Files (x86)\Steam\steamapps\common\Shadows of Doubt\BepInEx\interop\Il2CppSystem.Core.dll</HintPath>
+        <HintPath>..\..\..\Steam\steam\steamapps\common\Shadows of Doubt\BepInEx\interop\Il2CppSystem.Core.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine">
-        <HintPath>D:\Program Files (x86)\Steam\steamapps\common\Shadows of Doubt\BepInEx\interop\UnityEngine.dll</HintPath>
+        <HintPath>..\..\..\Steam\steam\steamapps\common\Shadows of Doubt\BepInEx\interop\UnityEngine.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.CoreModule">
-        <HintPath>D:\Program Files (x86)\Steam\steamapps\common\Shadows of Doubt\BepInEx\interop\UnityEngine.CoreModule.dll</HintPath>
+        <HintPath>..\..\..\Steam\steam\steamapps\common\Shadows of Doubt\BepInEx\interop\UnityEngine.CoreModule.dll</HintPath>
       </Reference>
     </ItemGroup>
 
