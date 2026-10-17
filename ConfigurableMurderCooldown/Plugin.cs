@@ -100,7 +100,7 @@ public class Plugin : PluginController<Plugin>
         Settings.NewMurdererMinCooldown = Config.Bind("Murderer First Kill", "Severedsolo.CMC.newKillerMinCooldown", 12, "Minimum time (in hours) before murderer makes their first kill");
         Settings.NewMurdererMaxCooldown = Config.Bind("Murderer First Kill", "Severedsolo.CMC.newKillerMaxCooldown", 48, "Maximum time (in hours) before murderer makes their first kill");
         Settings.ExistingMurdererMinCooldown = Config.Bind("Murderer Second+ Kill", "Severedsolo.CMC.existingKillerMinCooldown", 1, "Minimum time (in hours) before murderer makes their second (or more) kill");
-        Settings.ExistingMurdererMaxCooldown = Config.Bind("Murderer Second+ Kill", "Severedsolo.CMC.existingKillerMaxCooldown", 12, "Minimum time (in hours) before murderer makes their second (or more) kill");
+        Settings.ExistingMurdererMaxCooldown = Config.Bind("Murderer Second+ Kill", "Severedsolo.CMC.existingKillerMaxCooldown", 12, "Maximum time (in hours) before murderer makes their second (or more) kill");
         ModLog("Configs Bound");
     }
 }
